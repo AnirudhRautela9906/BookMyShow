@@ -1,0 +1,32 @@
+{
+  "hash": "f3a9654d",
+  "configHash": "8c1d2d32",
+  "lockfileHash": "88daad75",
+  "browserHash": "d6a45042",
+  "optimized": {
+    "react-dom/client": {
+      "src": "../../.yarn/__virtual__/react-dom-virtual-513b7bf52d/4/.yarn/berry/cache/react-dom-npm-19.2.4-4921ae503e-10c0.zip/node_modules/react-dom/client.js",
+      "file": "react-dom_client.js",
+      "fileHash": "6111d8a0",
+      "needsInterop": true
+    },
+    "react": {
+      "src": "../../../../../.yarn/berry/cache/react-npm-19.2.4-d29a5aac4d-10c0.zip/node_modules/react/index.js",
+      "file": "react.js",
+      "fileHash": "d5e2438d",
+      "needsInterop": true
+    },
+    "react/jsx-dev-runtime": {
+      "src": "../../../../../.yarn/berry/cache/react-npm-19.2.4-d29a5aac4d-10c0.zip/node_modules/react/jsx-dev-runtime.js",
+      "file": "react_jsx-dev-runtime.js",
+      "fileHash": "5ebc81a9",
+      "needsInterop": true
+    }
+  },
+  "chunks": {
+    "react-BgRIun6F": {
+      "file": "react-BgRIun6F.js",
+      "isDynamicEntry": false
+    }
+  }
+}
