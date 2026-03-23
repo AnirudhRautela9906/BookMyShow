@@ -29,7 +29,7 @@ const runTask = (cmd, label) => {
         spinner.succeed(chalk.green(` ${label} completed`));
         resolve();
       } else {
-        spinner.fail(chalk.red(`✖ ${label} failed`));
+        spinner.fail(chalk.red(` ${label} failed`));
 
         console.log(chalk.red('\n❌ Error details:\n'));
         if (stdout) console.log(stdout);
