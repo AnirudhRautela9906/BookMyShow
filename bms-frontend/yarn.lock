@@ -1135,6 +1135,8 @@ __metadata:
     prettier: "npm:^3.8.1"
     react: "npm:^19.2.4"
     react-dom: "npm:^19.2.4"
+    react-icons: "npm:^5.6.0"
+    react-router-dom: "npm:^7.13.2"
     tailwindcss: "npm:^4.2.2"
     typescript: "npm:~5.9.3"
     typescript-eslint: "npm:^8.56.1"
@@ -1276,6 +1278,13 @@ __metadata:
   version: 2.0.0
   resolution: "convert-source-map@npm:2.0.0"
   checksum: 10/c987be3ec061348cdb3c2bfb924bec86dea1eacad10550a85ca23edb0fe3556c3a61c7399114f3331ccb3499d7fd0285ab24566e5745929412983494c3926e15
+  languageName: node
+  linkType: hard
+
+"cookie@npm:^1.0.1":
+  version: 1.1.1
+  resolution: "cookie@npm:1.1.1"
+  checksum: 10/85538153054791155cf4d38d2e807e3b9382d71bf71d92fc46fca348515ea574049d0d9ef8eb84d2d54a681ad1d7a7316b1989b901dace50a6c0f4c3858dbdb2
   languageName: node
   linkType: hard
 
@@ -2416,6 +2425,43 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-icons@npm:^5.6.0":
+  version: 5.6.0
+  resolution: "react-icons@npm:5.6.0"
+  peerDependencies:
+    react: "*"
+  checksum: 10/571ac91977003695934c7e02bcfebec692f3f97191f7a9e77004bf4d44b859dc4265fed0200ddb45365c00e4c7b414d69eccb5707508b9beb5ef2df2093318eb
+  languageName: node
+  linkType: hard
+
+"react-router-dom@npm:^7.13.2":
+  version: 7.13.2
+  resolution: "react-router-dom@npm:7.13.2"
+  dependencies:
+    react-router: "npm:7.13.2"
+  peerDependencies:
+    react: ">=18"
+    react-dom: ">=18"
+  checksum: 10/981835c8df633f9b033e185d3efcdd178d5809b489d6d696172767cc7f96c280403cf4d8a768f86f99b4096360859bbc96aca66e93f4d5741e814766b34cced0
+  languageName: node
+  linkType: hard
+
+"react-router@npm:7.13.2":
+  version: 7.13.2
+  resolution: "react-router@npm:7.13.2"
+  dependencies:
+    cookie: "npm:^1.0.1"
+    set-cookie-parser: "npm:^2.6.0"
+  peerDependencies:
+    react: ">=18"
+    react-dom: ">=18"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+  checksum: 10/86e3538e4b50402bb15ac7b0938fdace5947a45d418bd1713b15288a208a5b102dfa599a3e5c4a86e136331b5dafaacfe57d93d2cc48241cf48fe770190cfbda
+  languageName: node
+  linkType: hard
+
 "react@npm:^19.2.4":
   version: 19.2.4
   resolution: "react@npm:19.2.4"
@@ -2534,6 +2580,13 @@ __metadata:
   bin:
     semver: bin/semver.js
   checksum: 10/26bdc6d58b29528f4142d29afb8526bc335f4fc04c4a10f2b98b217f277a031c66736bf82d3d3bb354a2f6a3ae50f18fd62b053c4ac3f294a3d10a61f5075b75
+  languageName: node
+  linkType: hard
+
+"set-cookie-parser@npm:^2.6.0":
+  version: 2.7.2
+  resolution: "set-cookie-parser@npm:2.7.2"
+  checksum: 10/4b6f5ec4e3fa1aef471d9207117704d217ba6bb6443400b41f5ea945c4a7f6fc08e405a122c1a32b4ebde41f06dea75e02c2af87cee9abb27f3e3fe911e5839b
   languageName: node
   linkType: hard
 
