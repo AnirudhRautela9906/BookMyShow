@@ -1131,6 +1131,7 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^7.0.1"
     eslint-plugin-react-refresh: "npm:^0.5.2"
     globals: "npm:^17.4.0"
+    keen-slider: "npm:^6.8.6"
     ora: "npm:^9.3.0"
     prettier: "npm:^3.8.1"
     react: "npm:^19.2.4"
@@ -1880,6 +1881,13 @@ __metadata:
   bin:
     json5: lib/cli.js
   checksum: 10/1db67b853ff0de3534085d630691d3247de53a2ed1390ba0ddff681ea43e9b3e30ecbdb65c5e9aab49435e44059c23dbd6fee8ee619419ba37465bb0dd7135da
+  languageName: node
+  linkType: hard
+
+"keen-slider@npm:^6.8.6":
+  version: 6.8.6
+  resolution: "keen-slider@npm:6.8.6"
+  checksum: 10/6de97fb1a3924c1ac21df009b017eb50927772eecaaf58c62d978f768b2ac4317aff63924508672980bcd227f4fde23f11e8a95e0c0fb72c0668f9847b567e81
   languageName: node
   linkType: hard
 
