@@ -1,18 +1,14 @@
-import { use } from 'react';
+import { useState } from 'react';
 import { useKeenSlider } from 'keen-slider/react';
 import 'keen-slider/keen-slider.min.css';
-const fetchMovies = async () => {
-  const res = await fetch(
-    `https://api.themoviedb.org/3/movie/popular?api_key=${import.meta.env.VITE_REACT_TMDB_API_KEY}`
-  );
-  const data = await res.json();
-  return data.results;
-};
-const moviesPromise = fetchMovies();
-const animation = { duration: 5000, easing: (t: number) => t };
-const BannerSlider = () => {
-  const movies = use(moviesPromise);
-  const [sliderRef] = useKeenSlider({
+import type { Movie } from '@/types';
+
+const animation = { duration: 10000, easing: (t: number) => t };
+
+const BannerSlider = ({ movies }: { movies: Movie[] }) => {
+  const [isPaused, setIsPaused] = useState(false);
+
+  const [sliderRef, slider] = useKeenSlider({
     loop: true,
     mode: 'free',
     slides: {
@@ -21,25 +17,56 @@ const BannerSlider = () => {
     },
     renderMode: 'performance',
     drag: false,
+
     created(s) {
-      s.moveToIdx(5, true, animation);
+      if (!isPaused) {
+        s.moveToIdx(5, true, animation);
+      }
     },
+
     updated(s) {
-      s.moveToIdx(s.track.details.abs + 5, true, animation);
+      if (!isPaused) {
+        s.moveToIdx(s.track.details.abs + 5, true, animation);
+      }
     },
+
     animationEnded(s) {
-      s.moveToIdx(s.track.details.abs + 5, true, animation);
+      if (!isPaused) {
+        s.moveToIdx(s.track.details.abs + 5, true, animation);
+      }
     },
   });
+
+  const pause = () => {
+    setIsPaused(true);
+    slider.current?.animator.stop();
+  };
+
+  const play = () => {
+    setIsPaused(false);
+    slider.current?.moveToIdx(
+      slider.current.track.details.abs + 5,
+      true,
+      animation
+    );
+  };
+
   return (
     <div className='bg-white py-6'>
       <div className='mx-auto px-4'>
-        <div ref={sliderRef} className='keen-slider'>
-          {movies.map((movie: any) => (
+        <div
+          ref={sliderRef}
+          className='keen-slider'
+          onMouseEnter={pause} // 🛑 pause on hover
+          onMouseLeave={play} // ▶️ resume on leave
+          onTouchStart={pause} // 📱 pause on touch
+          onTouchEnd={play} // 📱 resume after touch
+        >
+          {movies.map(movie => (
             <div key={movie?.id} className='keen-slider__slide'>
               <img
-                src={`https://image.tmdb.org/t/p/original${movie?.backdrop_path}`}
-                className='h-75 w-full rounded-xl object-cover'
+                src={movie?.banner}
+                className='h-65 w-full rounded-xl object-cover'
               />
             </div>
           ))}
